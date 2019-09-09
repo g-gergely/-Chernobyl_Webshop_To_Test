@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+
+.center {
+    margin: auto;
+    width: 80%;
+    border: 3px solid green;
+    padding: 10%;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.bin{
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.bin:hover{
+    box-shadow: 0 -18px 20px #e6ff4d;
+}
+
+#money{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#review{
+    font-size: 4rem;
+    letter-spacing: 2rem;
+    color: white;
+    opacity: 0.6;
+    padding: 0;
+    margin: 0;
+    border:0;
+    transition: letter-spacing 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.amounts{
+    border-radius: 4px;
+    border-color: white;
+    color: black;
+    background-color: white;
+}
+
+.amounts:hover{
+    background-color: #e6ff4d;
+    color: red;
+}
+
+body {
+    background: url("../img/newBackground.jpg") no-repeat fixed center;
+    font-family: Orbitron, sans-serif;
+}
+
+#review:hover{
+    letter-spacing: 0.4rem;
+    opacity: 1.0;
+}
+
+#deleteAll{
+    border: 3px solid red;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-bottom-color 0.1s ease-in-out, border-left-color 0.2s ease-in-out, border-top-color 0.3s ease-in-out, border-right-color 0.4s ease-in-out;
+
+}
+
+#deleteAll:hover{
+    background-color: #e6ff4d;
+    color: red;
+    border-right-color: darkred;
+    border-top-color: darkred;
+    border-left-color: darkred;
+    border-bottom-color: darkred;
+
+}
+
+#checkoutBtn {
+    font-size: 2.0rem;
+    display: block;
+    margin: auto;
+    letter-spacing: 1rem;
+    border-radius: 1rem;
+    background-color: black;
+    transition:  font-size 0.3s ease-in-out;
+}
+
+#actionContainer{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#checkoutContainer{
+    bottom: 70px;
+    padding-top: -20px;
+    margin-top: -20px;
+
+}
+
+#checkoutBtn:hover
+{
+    font-size: 2.5rem;
+    background-color: dimgrey;
+}
+
+#checkoutBtn:active
+{
+    color: #aca;
+    border-left: 2px solid #030;
+    border-top: 2px solid #030;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+.total{
+    font-size: 2rem;
+    display: inline-block;
+}
+
+#money{
+    margin-left: 2rem;
+    margin-right: 0.7rem;
+}

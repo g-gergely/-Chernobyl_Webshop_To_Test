@@ -1,0 +1,18 @@
+#backToReview {
+    font-size: 4rem;
+    letter-spacing: 2rem;
+    color: white;
+    opacity: 0.6;
+    padding: 0;
+    margin: 0;
+    border:0;
+    transition: letter-spacing 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+#backToReview:hover{
+    text-decoration: none;
+    background-color: #06ff4d;
+}

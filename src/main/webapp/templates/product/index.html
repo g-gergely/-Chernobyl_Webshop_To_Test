@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Codecool" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Codecool Shop</title>
+
+    <!-- Bootstrap components -->
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!--Latest compiled and minified Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- End of Bootstrap components -->
+
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/registry.css" />
+    <script src="/static/js/index.js" defer></script>
+
+</head>
+
+<body>
+<!-- Modal -->
+<!-- Registration -->
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog form-dark" role="document">
+        <!--Content-->
+        <div class="modal-content card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');">
+            <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                <!--Header-->
+                <div class="modal-header text-center pb-4">
+                    <h3 class="modal-title w-100 white-text font-weight-bold" id="sign"><strong>SIGN</strong> <a
+                            class="green-text font-weight-bold"><strong> UP</strong></a></h3>
+                    <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <form action="/" method="post">
+                        <div class="md-form mb-5">
+                            <input type="text" id="Form-name" class="form-control validate white-text">
+                            <label data-error="Already Used" data-success="Right" for="Form-name">Your Username</label>
+                        </div>
+
+                        <div class="md-form mb-5">
+                            <input type="email" id="Form-email5" class="form-control validate white-text">
+                            <label data-error="wrong" data-success="right" for="Form-email5">Your email</label>
+                        </div>
+
+                        <div class="md-form pb-3">
+                            <input type="password" id="Form-pass5" class="form-control validate white-text">
+                            <label data-error="wrong" data-success="right" for="Form-pass5">Your password</label>
+                        </div>4
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="text-center mb-3 col-md-12">
+                            <button type="submit" class="btn btn-success btn-block btn-rounded z-depth-1">Sign up</button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    </form>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+                            <p class="font-small white-text d-flex justify-content-end">Have an account? <a href="#" class="green-text ml-1 font-weight-bold">
+                                Log in</a></p>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+<!-- Login -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog form-dark" role="document">
+        <!--Content-->
+        <div class="modal-content card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');">
+            <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                <!--Header-->
+                <div class="modal-header text-center pb-4">
+                    <h3 class="modal-title w-100 white-text font-weight-bold" id="log"><strong>LOG</strong> <a
+                            class="green-text font-weight-bold"><strong> IN</strong></a></h3>
+                    <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <!--Body-->
+                    <div class="md-form mb-5">
+                        <input type="text" id="User-id" class="form-control validate white-text">
+                        <label data-error="Already Used" data-success="Right" for="User-id">Your Username</label>
+                    </div>
+
+                    <div class="md-form pb-3">
+                        <input type="password" id="User-pass5" class="form-control validate white-text">
+                        <label data-error="wrong" data-success="right" for="User-pass5">Your password</label>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="text-center mb-3 col-md-12">
+                            <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Login</button>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+<!-- Logout -->
+<div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog form-dark" role="document">
+        <!--Content-->
+        <div class="modal-content card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');">
+            <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                <!--Header-->
+                <div class="modal-header text-center pb-4">
+                    <h3 class="modal-title w-100 white-text font-weight-bold" id="logout-id"><strong>LOG</strong> <a
+                            class="green-text font-weight-bold"><strong> OUT</strong></a></h3>
+                    <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <!--Body-->
+                    <div class="md-form mb-5">
+                        <label data-error="Already Used" data-success="Right" for="User-id">Are you sure want to Logout?</label>
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="text-center mb-3 col-md-12">
+                            <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Logout</button>
+                            <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1" id="btnclose" data-dismiss="modal">Cancel</button>
+
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+<!-- Navbar elements -->
+<div class="sticky-top bg-primary">
+<div class="text-center">
+    <ul>
+        <li><a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+        <li><a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#login">Login</a></li>
+        <li><a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#logout">Logout</a></li>
+        <!-- cart -->
+        <div class="float-lg-right">
+        <li><div class="d-flex flex-sm-row-reverse"><p id="basketItemCounter" th:text="${basketSize}"></p>
+            <a id="basket" data-items="" href="/review?items=">
+                <img id="shopping_cart" th:attr="src='/static/img/shopping_cart.png'"  title="ShoppingCart" alt="Shopping cart" width="45" height="45"></a>
+        </div></li>
+        </div>>
+    </ul>
+</div>
+</div>
+
+<!-- Logo -->
+<div class="jumbotron text-center">
+    <h1 id ="title" class="neon">Chernobyl webshop</h1>
+    <h2 class="neon">We assure our customers that 3.6 roentgen is not great but not terrible.</h2>
+</div>
+
+<!-- Filter -->
+<div class="container">
+
+    <form action="/" method="get">
+
+   <div class="col-lg-3" th:object="${supplier}">
+       <select class="form-control" id="supplierCat" name="supplierCat">
+           <option value="0">Select Supplier</option>
+           <option th:each="cat : ${supplier}"
+                   th:text="${cat.name}"
+                   th:value="${cat.id}"></option>
+       </select>
+   </div>
+
+   <div class="col-lg-3" th:object="${category}">
+       <select class="form-control" id="productCat" name="productCat">
+           <option value="0">Select Product Category</option>
+           <option th:each="item : ${category}"
+                   th:text="${item.name}"
+                   th:value="${item.id}" type></option>
+       </select>
+
+       <input type="text" name="filterBasket" id="filterBasket" value="">
+       <button type="button"  id="search" class="btn btn-secondary">Search</button>
+
+       <input id="real_submit" type="submit" value="Send">
+   </div>
+   </form>
+
+   <!--
+   <div class="card">
+       <strong th:text="${category}">Category Title</strong>
+   </div>
+   -->
+
+    <br> <br>
+    <div id="products" class="row">
+        <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
+            <div class="card">
+                <img class=""  th:attr="src='/static/img/chernobyl_' + ${prod.id} + '.jpg'" alt="chernobyl_" width="350" height="250" />
+                <div class="card-header">
+                    <h4 class="card-title" th:text="${prod.name}">Product name</h4>
+                    <p class="card-text" th:text="${prod.description}">Product description... </p>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="lead" th:text="${prod.price}">100 USD</p>
+                    </div>
+                    <div class="card-text">
+                        <button class="btn btn-success indexAddBtn"  th:attr="id=${prod.getId()}" >Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="footer.html :: copy"></div>
+
+
+</body>
+</html>

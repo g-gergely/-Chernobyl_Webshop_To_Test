@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Codecool"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <title>review</title>
+
+    <!-- Bootstrap components -->
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!--Latest compiled and minified Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- End of Bootstrap components -->
+
+
+    <link rel="stylesheet" type="text/css" href="/static/css/review.css"/>
+    <script src="/static/js/review.js" defer></script>
+</head>
+
+<body>
+
+<p id="review">Back to shopping</p>
+<div id="actionContainer" class="center shadow-lg p-3 mb-5 bg-white rounded">
+    <table id="review-table" class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th></th>
+            <th title="Sure to clear the cart?" id="deleteAll">Delete all</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="productRows" th:each="instance : ${basket}" th:attr="data-el_id=${instance.key.getId()}">
+
+            <td><img class="d-flex mr-3" th:attr="src='/static/img/chernobyl_' + ${instance.key.getId()} + '.jpg'"
+                     alt="Willie Wonka" width="92" height="52">
+            </td>
+            <td class="productNames" th:text="${instance.key.getName()}"></td>
+            <td><a tabindex="0"  class="btn btn-lg btn-danger amounts" role="button"
+                   data-toggle="popover" data-trigger="focus" title="Click to type custom amount"
+                   data-content="Click to type custom amount" th:text="${instance.value}">
+                Click here to type custom amount
+            </a></td>
+            <td class="productTotal" th:text="${instance.key.getDefaultPrice() * instance.value}"></td>
+            <td>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-success add">Add</button>
+                    <button type="button" class="btn btn-danger remove">Remove</button>
+                </div>
+            </td>
+
+            <td><img class="bin" th:attr="title='Delete all ' + ${instance.key.getName()}" src="/static/img/bin.png" alt="bin" width="50" height="60"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div><p class="total"><em>Total: </em></p>
+        <p id="money" class="total" th:text="${basketTotal}"> 999999999999</p>
+        <p class="total"> RUB</p></div>
+</div>
+<div class="d-flex justify-content-md-center"><button id="checkoutBtn" type="button" class="btn btn-info">Go to Checkout</button></div>
+</body>
+</html>

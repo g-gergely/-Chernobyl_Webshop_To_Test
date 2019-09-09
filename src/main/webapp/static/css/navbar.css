@@ -1,0 +1,27 @@
+.text-center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.text-center li {
+    float: left;
+}
+
+.text-center .btn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.text-center li .btn:hover {
+    background-color: dimgrey;
+}
+
+.text-center .btn {
+    background: black;
+}
